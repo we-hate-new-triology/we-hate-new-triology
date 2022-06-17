@@ -57,6 +57,14 @@ footer{
     grid-row: 1/1;
 }
 
+@keyframes crazy {
+    from{filter: saturate(0);}
+    25%{filter:saturate(2)}
+    50%{filter:saturate(4)}
+    75%{filter:saturate(2)}
+    to{filter: saturate(0);}
+}
+
 #animation{
     background-color: red;
     grid-column: 1/1;
@@ -65,6 +73,7 @@ footer{
     background-size: auto 100%;
     background-repeat:  no-repeat;
     background-position: center top;
+    animation: crazy 5s;
 }
 
 #members{
@@ -81,10 +90,13 @@ footer{
 .member img{
     border-radius: 20 px;
     width: 4rem;
-    margin: 1rem;
     text-align: center;
+    margin:auto;
+    display:block;
 }
 
 .member p{
     text-align: center;
 }
+
+
