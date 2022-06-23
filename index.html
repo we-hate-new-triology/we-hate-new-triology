@@ -4,7 +4,7 @@
     <title>Star Wars</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>   
-    <body>
+    <body >
       <header>
            <nav>
               <a href="../pages/characters.html">Personajes</a>
@@ -14,45 +14,48 @@
 
       </header>
       <main class="grid-container">
-         <section id="animation" class="grid-item">
+         <div id="animation" class="grid-item">
              
 
 
-         </section>
-         <section id="description" sclass="grid-item">
+         </div>
+         <div id="description" sclass="grid-item">
             <h1>Star Wars</h1>
 
             <p class="primaryText">
-                Venimos del lado oscuro
+               El miedo es el camino hacia el Lado Oscuro.
 
             </p>
 
             <p class="secondaryText">
 
-                Desde el más allá
+               Actúa solo cuando puedas mantener el equilibrio
             </p>
-         </section> 
+         </div> 
 
 
         <section id="video" class="grid-item">
-            <video src="./videos/intro.mp4" autoplay loop></video>
+            <video id="introduccion" src="./videos/intro.mp4" controls muted autoplay loop poster="public/images/poster.jpg"></video>
 
         </section>
 
         <section id="members" class="grid-item">
+           <br/>
+           <br/>
+           <br/>
             
              <div class="member">
-                <img src='./public/images/luke.jpg' class="centrarImagen"/>
+                <img src='./public/images/luke.jpg' onClick="reproducir('luke')" class="centrarImagen"/>
                 <p>Jorge</p>
 
              </div>
              <div class="member">
-                <img src='./public/images/leia.jpg' class="centrarImagen"/>
+                <img src='./public/images/leia.jpg' onClick="reproducir('leia')" class="centrarImagen"/>
                 <p>Denitsa</p>
 
              </div>
              <div class="member">
-                <img src='./public/images/yoda.jpg' class="centrarImagen"/>
+                <img src='./public/images/yoda.jpg' onClick="reproducir('yoda')" class="centrarImagen"/>
                 <p>Jorge</p>
 
              </div>
@@ -61,12 +64,15 @@
         </section>
 
         <footer class="grid-item">
-          Copyright 2022 Star Wars
+          Copyright 2022 We-hat-new-trilogy
 
 
         </footer>
 
       </main>
+
+      <script src="../js/index.js"></script>
+
 
     </body>
      

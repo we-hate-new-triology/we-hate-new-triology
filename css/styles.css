@@ -9,7 +9,7 @@
 
 html{
     font-family: roboto;
-    font-size: x-large;
+    font-size: medium;
 }
 header{
     background-color:  cornflowerblue;
@@ -25,7 +25,20 @@ nav
 
 nav a{
     padding: 0 1rem;
+
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+
 }
+
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
 footer{
     position: sticky;
     bottom: 0;
@@ -43,7 +56,7 @@ footer{
 }
 
 .grid-container{
-    background-color: grey;
+    background-color: lightslategray;
     display: grid;
     gap: 1rem;
     padding: 1rem;
@@ -61,43 +74,60 @@ footer{
     background-image: url(../public/images/main.jpg);
     background-size: auto 100%;
     background-repeat:  no-repeat;
-    animation: crazy 5s;
+    animation: crazy 3s;
+    border-left: ridge;
+    border-top :ridge;
+    border-bottom: ridge;
 }
 
 #description{
     grid-column: 2/3;
     grid-row: 1/1;
+    border-right: ridge;
+    border-top :ridge;
+    border-bottom: ridge;
 }
 
 
 #video{
     grid-column: 1/1;
     grid-row: 2/2;
+    height:93.4%;
+}
+
+#introduccion{
+    width: 100%;
+    /*height: 90%;*/
+
 }
 
 #members{
     grid-column: 2/3;
     grid-row: 2/2;
+    height:93.4%;
 }
 
 @keyframes crazy {
     from{filter: saturate(0);}
-    25%{filter:saturate(2)}
-    50%{filter:saturate(4)}
-    75%{filter:saturate(2)}
+    20%{filter:saturate(5)}
+    40%{filter:saturate(10)}
+    60%{filter:saturate(15)}
+    80%{filter:saturate(10)}
     to{filter: saturate(0);}
 }
 
 section{
-    border-style:groove;
+    border-style:ridge;
     text-align: center;
 }
 
 .primaryText{
     margin:1rem;
+    text-align:center;
 }
 .secondaryText{
     color:rgb(88,88,88);
+    text-align:center;
 }
 .member img{
     border-radius: 20 px;
@@ -110,5 +140,94 @@ section{
 .member p{
     text-align: center;
 }
+h1{
+    text-align: center;
+}
+.member img{
+    transition:0.5s;
+    object-fit: cover;
+}
+.member img:hover{
+    transform:scale(2.0);
+}
 
+table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.blueTable tbody td {
+    font-size: 13px;
+  }
+  table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.blueTable thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
+  table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.blueTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.blueTable tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D0E4F5;
+    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    border-top: 2px solid #444444;
+  }
+  table.blueTable tfoot td {
+    font-size: 14px;
+  }
+  table.blueTable tfoot .links {
+    text-align: right;
+  }
+  table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
 
+  .preloader {
+    width: 70px;
+    height: 70px;
+    border: 10px solid #eee;
+    border-top: 10px solid #666;
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .characters{
+      background-color: lightslategray;
+  }
