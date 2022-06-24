@@ -3,18 +3,28 @@
 <head>
     <title>Star Wars</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/draw.css">
+    <script src="../js/draw.js"></script>
 </head>   
     <body>
       <header>
-           <nav>
-            <a href="../index.html">Home</a>
-              <a href="./characters.html">Personajes</a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../pages/characters.html">Personajes</a>
+          <a href="#">Vehículos</a>
+          <a href="../pages/draw.html">Lienzos</a>
 
-           </nav>
+       </nav>
 
       </header>
-      <main id="characters">
-       
+      <main>
+          <div id='control'>
+              <input id="ndots" min="0" type="number" onKeyDown="return false" placeholder="Enter a number" oninput="draw()">
+              <input id="ndotsDestructor" min="0" type="number" onKeyDown="return false" placeholder="Enter a number" oninput="drawDestructor()">
+              <button id="detonation" onclick="detonated()">Fight</button>
+          </div>
+          <div id='draw'></div> 
+          <div id='drawDestructor'></div> 
 
       </main>
 
